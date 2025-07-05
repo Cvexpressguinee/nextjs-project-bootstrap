@@ -214,6 +214,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 ;
 ;
 function ProductCard({ name, price, imageUrl, description }) {
+    const formatPrice = (price)=>{
+        return new Intl.NumberFormat('fr-FR').format(price);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
         className: "overflow-hidden",
         children: [
@@ -231,12 +234,12 @@ function ProductCard({ name, price, imageUrl, description }) {
                             sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ProductCard.tsx",
-                            lineNumber: 18,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ProductCard.tsx",
-                        lineNumber: 17,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -247,7 +250,7 @@ function ProductCard({ name, price, imageUrl, description }) {
                                 children: name
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ProductCard.tsx",
-                                lineNumber: 28,
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -255,30 +258,30 @@ function ProductCard({ name, price, imageUrl, description }) {
                                 children: description
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ProductCard.tsx",
-                                lineNumber: 29,
+                                lineNumber: 33,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-lg font-bold",
                                 children: [
-                                    price.toLocaleString(),
+                                    formatPrice(price),
                                     " GNF"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ProductCard.tsx",
-                                lineNumber: 30,
+                                lineNumber: 34,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ProductCard.tsx",
-                        lineNumber: 27,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ProductCard.tsx",
-                lineNumber: 16,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardFooter"], {
@@ -286,24 +289,24 @@ function ProductCard({ name, price, imageUrl, description }) {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                     className: "w-full",
                     onClick: ()=>{
-                        const message = `Bonjour, je suis intéressé(e) par ${name} à ${price.toLocaleString()} GNF`;
+                        const message = `Bonjour, je suis intéressé(e) par ${name} à ${formatPrice(price)} GNF`;
                         window.open(`https://wa.me/611820064?text=${encodeURIComponent(message)}`, '_blank');
                     },
                     children: "Contacter sur WhatsApp"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ProductCard.tsx",
-                    lineNumber: 34,
+                    lineNumber: 38,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ProductCard.tsx",
-                lineNumber: 33,
+                lineNumber: 37,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ProductCard.tsx",
-        lineNumber: 15,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }
@@ -387,7 +390,7 @@ const products = [
     {
         id: "1",
         name: "Robe d'Été Fleurie",
-        price: 450000,
+        price: 350000,
         imageUrl: "https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=800",
         description: "Élégante robe d'été avec motif floral, parfaite pour les journées ensoleillées",
         category: "Robes"
@@ -395,7 +398,7 @@ const products = [
     {
         id: "2",
         name: "Jupe Plissée Midi",
-        price: 350000,
+        price: 250000,
         imageUrl: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=800",
         description: "Jupe plissée élégante, longueur midi, style intemporel",
         category: "Jupes"
@@ -403,7 +406,7 @@ const products = [
     {
         id: "3",
         name: "Pantalon Taille Haute",
-        price: 400000,
+        price: 300000,
         imageUrl: "https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=800",
         description: "Pantalon élégant à taille haute, coupe droite moderne",
         category: "Pantalons"
@@ -411,7 +414,7 @@ const products = [
     {
         id: "4",
         name: "Chemisier en Soie",
-        price: 550000,
+        price: 400000,
         imageUrl: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=800",
         description: "Chemisier en soie luxueux, parfait pour le bureau ou les sorties",
         category: "Chemisiers"
@@ -419,7 +422,7 @@ const products = [
     {
         id: "5",
         name: "Robe de Soirée",
-        price: 750000,
+        price: 500000,
         imageUrl: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800",
         description: "Magnifique robe de soirée, parfaite pour les occasions spéciales",
         category: "Robes"
@@ -427,7 +430,7 @@ const products = [
     {
         id: "6",
         name: "Jupe Crayon",
-        price: 380000,
+        price: 280000,
         imageUrl: "https://images.unsplash.com/photo-1582142306909-195724d33ffc?w=800",
         description: "Jupe crayon professionnelle, coupe ajustée élégante",
         category: "Jupes"
